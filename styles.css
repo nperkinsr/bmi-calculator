@@ -1,0 +1,143 @@
+:root {
+    --color1: #000000;  /* Black */
+    --color2: #ffffff;  /* White */
+    --color3: #f0f0f0;  /* Light Grey */
+    --color4: #1a1f27;  /* Dark Blue */
+    --color5: #183255;  /* Blue */
+    --color6: #b7ff1a;  /* Green */
+  }
+
+body {
+    background-color: var(--color4);
+    font-family: Arial, sans-serif;
+    color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bmi-container {
+    background: var(--color5);
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container {
+    display: flex;
+    gap: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input {
+    padding: 8px;
+    width: 8rem;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+.input-group input:focus {
+    outline: 2px solid var(--color6);
+    box-shadow: 0 0 5px var(--color6);
+    border: none;
+}
+
+.input-group input::placeholder {
+    color: #00000045;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+button {
+    background-color: var(--color3);
+    color: black;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--color2);
+}
+
+#bmi-category {
+    color: green;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color2);
+}
+
+#result-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color5);
+    color: var(--color2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+}
+
+#bmi-category {
+    color: var(--color6);
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+#bmi-value {
+    color: var(--color2);
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#bmi-message {
+    color: var(--color2);
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
